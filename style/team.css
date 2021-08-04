@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.ourteam {
+    text-transform: uppercase;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    margin-top: 75px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s;
+}
+
+.teamheader {
+    padding: 10px 20px;
+    color: white;
+}
+
+.teamheader i {
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.teamheader i:hover {
+    color: yellow;
+}
+
+
+
+.theteam {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.teamcard {
+    width: 300px;
+    height: auto;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px #000000;
+    margin-bottom: 20px;
+}
+
+.member{
+    margin-bottom: 5px;
+}
+
+.memberdet {
+    padding: 20px;
+    text-align: center;
+}
+
+.memberdet h3{
+    margin-bottom: 5px;    
+}
+
+.teamcard img {
+    width: 300px;
+    height: 300px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    filter: grayscale(1);
+    transition: all 0.5s linear;
+}
+
+.teamcard img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+.connecticons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.connecticons a {
+    font-size: 30px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.connecticons a:hover {
+    color: #0e76a8;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Tripy </title>
+
+    <link rel="icon" href="../images/Ticon.png">
+
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/bsmodal.css">
+    <link rel="stylesheet" href="../style/bstable.css">
+    <link rel="stylesheet" href="../style/modal.css">
+    <link rel="stylesheet" href="../style/team.css">
+    <link rel="stylesheet" href="../style/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navmenu">
+            <i class="fas fa-bars" id="menu"></i>
+            <a href="../index.html"><img src="../images/tripy.png" alt="tripy logo" title="tripy logo"></a>
+        </div>
+    </header>
+    <div class="showmenu" id="showmenu">
+
+        <div class="topbox">
+            <a href="javascript:void(0)" class="crossmenu" onclick="closeNav()">&times;</a>
+            <img src="../images/calc.png" alt="calculator image">
+            <div class="topboxtext">
+                <h2>Tripy</h2>
+                <h4>split your trip bill</h4>
+            </div>
+        </div>
+        <div class="menuitems">
+            <a href="team.html" target="_blank" id="team"><i class="fas fa-users"></i> team</a>
+            <a href="about.html" target="_blank" id="about"><i class="fas fa-star"></i> about</a>
+            <a href="feedback.html" target="_blank" id="feedback"><i class="fas fa-code"></i> site feedback</a>
+        </div>
+    </div>
+
+    <section style="margin-top: 75px;padding: 40px;">
+        <div class="whatistripy">
+            <h2>what is <span>tripy</span> ?</h2>
+            <p>All of us love to travel and explore new places with our loved ones specially with our friends.
+                But after the trip there comes the boring task of calculating expenses and splitting up which is by the way a drag.
+                Hi, my name is TRIPY and I am here to make your life a little less boring by helping you in this task.
+            </p>
+        </div>
+        <div class="howtouse">
+            <h2>how to use <span>tripy</span></h2>
+            <p class="ptag">I want to be your friend so I’ll tell you about myself and how I can be of use to you.</p>
+            <div class="useflex">
+                <div class="useit">
+                    <i class="fas fa-share-alt"></i>
+                    <p>Share the total expense of the trip along with number of days you stayed (which is obviously fixed).</p>
+                </div>
+                <div class="useit">
+                    <i class="fas fa-user-check"></i>
+                    <p>One by one introduce me to everyone.</p>
+                </div>
+                <div class="useit">
+                    <i class="fas fa-rupee-sign"></i>
+                    <p>Tell me your name , budget for the trip and the number of days one stayed for the trip.</p>
+                </div>
+                <div class="useit">
+                    <i class="fas fa-tasks"></i>
+                    <p>I’ll do the boring task for you and tell you the individual amount ought to be paid by everyone.</p>
+                </div>
+                <div class="useit">
+                    <i class="fas fa-file-csv"></i>
+                    <p>Anyone can download the receipt through me (an excel file).</p>
+                </div>
+                <div class="useit">
+                    <i class="far fa-credit-card"></i>
+                    <p>You can pay your amount via your cards.</p>
+                </div>
+                <div class="useit">
+                    <i class="fas fa-hands-helping"></i>
+                    <p>Now we are friends forever. The green paid sign is the symbol of our true friendship .</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="upcoming">
+            <h2>upcoming features</h2>
+            <div class="flexmaaro">
+                <div class="featuresleft">
+                <ul>
+                    <li><i class="fas fa-thumbs-up"></i> Personal wallet</li>
+                    <li><i class="fas fa-thumbs-up"></i> Estimate expense before the trip could be known</li>
+                </ul>
+            </div>
+            <div class="featuresright">
+                <ul>
+                    <li><i class="fas fa-thumbs-up"></i> Expenses could be added on regular basis <br> during the trip itself</li>
+                    <li><i class="fas fa-thumbs-up"></i> Refund of remaining money in the wallet</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../script/script.js"></script>
+    <script src="../script/team.js"></script>
+    <script src="../script/paid.js"></script>
+</body></html>

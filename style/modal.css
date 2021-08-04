@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #f3f3f3;
+    overflow-x: hidden;
+}
+
+.modal-content2 {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close2 {
+    position: relative;
+    margin-top: 40px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #f85032;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e73827, #f85032);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e73827, #f85032);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close2:hover,
+.close2:focus {
+    background: #f85032;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #e73827, #f85032);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #e73827, #f85032);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    outline: none;
+    border: none;
+}
+
+.modal-header2 {
+    padding: 2px 16px;
+    background: rgb(6, 44, 63);
+    background: linear-gradient(149deg, rgba(6, 44, 63, 1) 0%, rgba(105, 152, 218, 1) 100%);
+    color: white;
+}
+
+.modal-body2 {
+    padding: 2px 16px;
+}
+
+.modal-footer2 {
+    position: absolute;
+    bottom: 11px;
+    width: 100%;
+    padding: 2px 16px;
+    background: rgb(6, 44, 63);
+    background: linear-gradient(149deg, rgba(6, 44, 63, 1) 0%, rgba(105, 152, 218, 1) 100%);
+    color: white;
+}
+
+.payment {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+    overflow-y: hidden;
+    padding: 10px;
+}
+
+.payment .card {
+    position: relative;
+    width: 580px;
+    height: auto;
+    background: #fcfcfc;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    overflow: hidden;
+    transition: all 0.5s linear;
+}
+
+
+
+.payment .card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
+    pointer-events: none;
+}
+
+.chip {
+    position: absolute;
+    max-width: 70px;
+    margin-top: -10px;
+}
+
+.logo {
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: #ea221c;
+    border-radius: 50%;
+    box-shadow: -40px 0 0 rgba(255, 164, 36, 0.5);
+}
+
+.bankname {
+    color: #999;
+    text-align: end;
+    outline: none;
+    width: 100%;
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+.myformpay {
+    margin-top: 15px;
+}
+
+.inputbox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.inputbox span {
+    color: #089cff;
+    font-size: 1.1em;
+}
+
+.inputbox input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.8em;
+    color: #333;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.group .inputbox:last-child {
+    max-width: 60px;
+}
+
+.confirmpay {
+    position: relative;
+    margin-top: 40px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgb(6, 44, 63);
+    background: linear-gradient(149deg, rgba(6, 44, 63, 1) 0%, rgba(105, 152, 218, 1) 100%);
+    color: #ffffff;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 30px;
+
+}
+
+.confirmpay:hover,
+.confirmpay:focus {
+    background: rgb(6, 44, 63);
+    background: -webkit-linear-gradient(329deg, rgba(6, 44, 63, 1) 0%, rgba(105, 152, 218, 1) 100%);
+    background: -o-linear-gradient(329deg, rgba(6, 44, 63, 1) 0%, rgba(105, 152, 218, 1) 100%);
+    background: linear-gradient(59deg, rgba(6, 44, 63, 1) 0%, rgba(105, 152, 218, 1) 100%);
+    outline: none;
+    border: none;
+}
+
+.optionsbtn {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px;
+}

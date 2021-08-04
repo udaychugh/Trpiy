@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripy - Split your tirp bill</title>
+
+    <link rel="icon" href="images/Ticon.png">
+
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/bsmodal.css">
+    <link rel="stylesheet" href="style/bstable.css">
+    <link rel="stylesheet" href="style/modal.css">
+    <link rel="stylesheet" href="style/team.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+    
+    
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="navmenu">
+            <i class="fas fa-bars" id="menu"></i>
+            <img src="images/tripy.png" alt="tripy logo" title="tripy logo">
+        </div>
+    </header>
+    <div class="showmenu" id="showmenu">
+
+        <div class="topbox">
+            <a href="javascript:void(0)" class="crossmenu" onclick="closeNav()">&times;</a>
+            <img src="images/calc.png" alt="calculator image">
+            <div class="topboxtext">
+                <h2>Tripy</h2>
+                <h4>split your trip bill</h4>
+            </div>
+        </div>
+        <div class="menuitems">
+            <a href="pages/team.html" target="_blank" id="team"><i class="fas fa-users"></i> team</a>
+            <a href="pages/about.html" target="_blank" id="about"><i class="fas fa-star"></i> about</a>
+            <a href="pages/feedback.html" target="_blank" id="feedback"><i class="fas fa-code"></i> site feedback</a>
+        </div>
+    </div>
+
+    <section class="inputTotal">
+        <h2>total trip info</h2>
+        <div class="inputform">
+            <form action="#" class="form">
+                <div class="input">
+                    <label for="cost">total cost of trip &#8377; </label>
+                    <input type="number" name="cost" id="total-cost-input" min="0.00" max="1000000.00" step="1" placeholder="EX: 10000">
+                    <p id="cost-invalid"></p>
+                </div>
+                <div class="input">
+                    <label for="nights">total days of trip</label>
+                    <input type="number" name="days" id="total-nights-for-trip" min="0" max="365" step="1" placeholder="EX: 5">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="personinfo">
+        <h2>person information</h2>
+        <div class="inputform">
+            <form action="#" class="form" id="form-id">
+                <div class="input">
+                    <label for="pname">person name</label>
+                    <input type="text" id="name-input" name="pname" placeholder="EX: John Doe">
+                    <p id="name-invalid"></p>
+                </div>
+                <div class="input">
+                    <!--  <label for="pbudget">person budget &#8377; </label>
+                    <input type="number" id="budget-input" name="pbudget" min="0.00" max="1000000.00" step="1" placeholder="EX: 1000">
+                    <p id="budget-invalid"></p> -->
+                </div>
+                <div class="input">
+                    <label for="pdays">person days</label>
+                    <input type="number" id="nights-select" name="pdays" min="0" max="365" step="1" placeholder="EX: 5">
+                    <p id="number-invalid"></p>
+                </div>
+                <button class="addbutton" id="add-person" value="submit" type="button">add person</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="mypayements" id="mypayments">
+        <!-- Payments table -->
+        <hr />
+        <div class="payments-group">
+            <h2>Payments</h2>
+            <button id="export-btn" class="btn btn-light">Export</button>
+            <button id="show-chart" class="btn btn-light">Chart</button>
+            <div>
+                <label id="ppl-label" for="numOfppl">Number of People: </label>
+                <input id="ppl-num" type="number" disabled="true" style="background-color: transparent; outline: none; border: none;" />
+            </div>
+        </div>
+        <div>
+            <table id="paymentTable" class="table table-condensed">
+                <thead>
+                    <tr>
+                        <!-- This is changed because chrome doesnt like col-* in tables for some reason -->
+                        <th class="w-25 text-center">Name</th>
+                        <th class="w-25 text-center">Days</th>
+                        <th class="w-25 text-center">Payment</th>
+                        <th class="w-25 text-center">Bill Paid</th>
+                        <th class="w-25 text-center"></th>
+                    </tr>
+                </thead>
+                <tbody id="table-body" class="text-center"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editRowModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Edit Person</h5>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Name:</label>
+                            <input id="modal-name-input" style="width: 200px; text-transform: capitalize;" type="text" />
+                            <p id="modal-name-invalid"></p>
+
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label>Days:</label><br />
+                            <input id="modal-nights-input" class="text-center" type="number" />
+                            <p id="modal-number-invalid"></p>
+
+                        </div>
+                    </div><br />
+                    <div class="rowflex">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-secondary changingre" data-dismiss="modal">Close</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button id="save-edit" type="button" class="float-right btn btn-primary">Save
+                                changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- modal 2 -->
+    <div id="myModal2" class="modal2">
+        <div class="modal-content2">
+            <div class="modal-header2">
+
+                <h2>Pay your bill now</h2>
+            </div>
+            <div class="modal-body2">
+
+                <div class="payment">
+                    <div class="bg">
+
+                    </div>
+                    <div class="card">
+                        <img src="images/chip.png" alt="bank chip" class="chip" />
+                        <div class="logo"></div>
+                        <h2 class="bankname" contenteditable="true" id="bankname">Bank Name</h2>
+                        <form class="myformpay" id="myformpay">
+                            <div class="inputbox">
+                                <span>Card No.</span>
+                                <input type="text" placeholder="0123 4567 8901" maxlength="19" id="cardno" required>
+                            </div>
+                            <div class="inputbox">
+                                <span>Card Holder</span>
+                                <input type="text" placeholder="John Doe" id="cardholder" onchange="this.value = this.value.toUpperCase();" required>
+                            </div>
+                            <div class="group">
+                                <div class="inputbox">
+                                    <span>Valid Thru</span>
+                                    <input type="text" placeholder="MM/YY" maxlength="5" id="valid" required>
+                                </div>
+                                <div class="inputbox">
+                                    <span>CVV</span>
+                                    <input type="password" placeholder="***" maxlength="3" id="cvv" required>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="optionsbtn">
+                    <button class="close2" id="close2" onclick="closemymodal()">Cancel</button>
+                    <button class="confirmpay" onclick="confirmpayment()">Confirm and Pay</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer2">
+            <h3><i class="fas fa-shield-alt"></i> Secure Payment by Payu</h3>
+        </div>
+    </div>
+
+    <div>
+        <canvas id="myChart" style="padding: 20px;"></canvas>
+    </div>
+
+
+    <script src="script/script.js"></script>
+    <script src="script/team.js"></script>
+    <script src="script/paid.js"></script>
+
+</body></html>

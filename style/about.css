@@ -1,0 +1,90 @@
+.whatistripy {}
+
+.whatistripy h2 {
+    text-transform: uppercase;
+}
+
+.whatistripy h2 span {
+    color: #c30202;
+    text-decoration: underline;
+}
+
+.whatistripy p {
+    margin: 20px 0;
+    padding-right: 50px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.howtouse h2 {
+    text-transform: uppercase;
+}
+
+.howtouse h2 span {
+    color: #c30202;
+    text-decoration: underline;
+}
+
+.howtouse .ptag {
+    margin: 20px 0;
+    padding-right: 50px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.useflex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.useit {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    height: 200px;
+    background-color: #6998da;
+    color: #f3f3f3;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 2px 12px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 12px -4px rgba(0, 0, 0, 0.75);
+    transition: all 0.3s ease-in-out;
+}
+
+.useit:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.useit i {
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    color: #c30202;
+    font-size: 22px;
+    box-shadow: 2px 2px 12px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 2px 12px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 12px -4px rgba(0, 0, 0, 0.75);
+}
+
+.upcoming{
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+.upcoming h2{
+    margin-bottom: 20px;
+}
+
+.flexmaaro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 18px;
+    padding-right: 50px;
+}
+
+
