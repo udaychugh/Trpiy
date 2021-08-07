@@ -217,10 +217,13 @@ function updateTable() {
 
 }
 
+var idval = 1;
 //  Append a new row to the table
 function appendNewRow(howManyPpl) {
     //  Get the correct index for the last person in the personList to add to table
     let personToAdd = howManyPpl - 1;
+
+    idval++;
 
     let payment = (
         +personList[personToAdd].payment + +personList[personToAdd].adjustment
@@ -241,11 +244,14 @@ function appendNewRow(howManyPpl) {
         '&#8377; ' + payment +
         "</td>" +
         "<td class='w-25 align-middle midme'>" +
-        "<button id='paynow' class='btn' onclick='showbill(this)'>Pay Now</button>" +
+        "<button id='paynow' class='btn paynow' onclick='showbill(this)'>Pay Now</button>" +
         "<button class='btn mr-5' onclick='editRow(this)' id='editbutton'><i class='fas fa-pencil-alt'></i></button>" +
         "<button class='btn' onclick='deletePerson(this);' id='deletebutton'><i class='fas fa-trash-alt'></i></button>" +
-        "</td>" +
-        "</tr>";
+        "<span class='showpayornot'><span>"
+    "</td>" +
+    "</tr>";
+
+
 
     //  Append person to the table
     document.getElementById("table-body").appendChild(newRow);
@@ -486,7 +492,7 @@ function buildChart(labels, values, chartTitle) {
         },
         options: {
             repsonsive: true,
-            
+
         }
     });
     return mychart;
@@ -560,13 +566,16 @@ function confirmpayment() {
     var valid = document.getElementById("valid").value = "";
     var cvv = document.getElementById("cvv").value = "";
 
-    var paynow = document.getElementById("paynow");
-    paynow.classList.remove("btn");
-    paynow.classList.add("paidbill");
-    paynow.disabled = "true";
-    paynow.innerHTML = "Paid";
+    //var paynow = document.querySelector(".paynowbuttonclass");
+    //paynow.classList.remove("btn");
+    //paynow.classList.add("paidbill");
+    //paynow.disabled = "true";
+    //paynow.innerHTML = "Paid";
+    document.getElementById("paynow").remove();
     document.getElementById("editbutton").remove();
     document.getElementById("deletebutton").remove();
+
+    //document.querySelector(".showpayornot").innerHTML = "Paid";
 
 }
 
@@ -575,4 +584,3 @@ function importCSV() {
 
 
 }
-

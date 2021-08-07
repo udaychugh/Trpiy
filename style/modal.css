@@ -21,6 +21,7 @@
     padding: 0;
     border: 1px solid #888;
     width: 80%;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -63,14 +64,15 @@
     outline: none;
     background: #f85032;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e73827, #f85032);
     /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#e73827), to(#f85032));
     background: linear-gradient(to right, #e73827, #f85032);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     color: #fff;
     font-size: 1.5em;
     cursor: pointer;
+    -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -78,8 +80,8 @@
 .close2:focus {
     background: #f85032;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #e73827, #f85032);
     /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, right top, left top, from(#e73827), to(#f85032));
     background: linear-gradient(to left, #e73827, #f85032);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     outline: none;
@@ -109,10 +111,20 @@
 
 .payment {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     overflow-y: hidden;
     padding: 10px;
@@ -125,9 +137,11 @@
     background: #fcfcfc;
     border-radius: 15px;
     padding: 40px;
+    -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.05);
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.05);
     z-index: 1000;
     overflow: hidden;
+    -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
 
@@ -141,6 +155,7 @@
     width: 500px;
     height: 500px;
     border-radius: 50%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.05)), to(transparent));
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
     pointer-events: none;
 }
@@ -159,6 +174,7 @@
     height: 60px;
     background: #ea221c;
     border-radius: 50%;
+    -webkit-box-shadow: -40px 0 0 rgba(255, 164, 36, 0.5);
     box-shadow: -40px 0 0 rgba(255, 164, 36, 0.5);
 }
 
@@ -176,7 +192,12 @@
 }
 
 .inputbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 20px;
 }
@@ -197,8 +218,14 @@
 
 .group {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -218,6 +245,7 @@
     color: #ffffff;
     font-size: 1.5em;
     cursor: pointer;
+    -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
     margin-left: 30px;
 
@@ -226,15 +254,17 @@
 .confirmpay:hover,
 .confirmpay:focus {
     background: rgb(6, 44, 63);
-    background: -webkit-linear-gradient(329deg, rgba(6, 44, 63, 1) 0%, rgba(105, 152, 218, 1) 100%);
-    background: -o-linear-gradient(329deg, rgba(6, 44, 63, 1) 0%, rgba(105, 152, 218, 1) 100%);
     background: linear-gradient(59deg, rgba(6, 44, 63, 1) 0%, rgba(105, 152, 218, 1) 100%);
     outline: none;
     border: none;
 }
 
 .optionsbtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     width: 100%;
     padding: 10px;

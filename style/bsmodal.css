@@ -59,18 +59,15 @@ button.close {
 
 .modal.fade .modal-dialog {
     -webkit-transform: translate(0, -25%);
-    -ms-transform: translate(0, -25%);
-    -o-transform: translate(0, -25%);
     transform: translate(0, -25%);
     -webkit-transition: -webkit-transform 0.3s ease-out;
-    -o-transition: -o-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
 .modal.in .modal-dialog {
     -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
     transform: translate(0, 0);
 }
 
@@ -93,7 +90,6 @@ button.close {
     border-radius: 6px;
     -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-    -webkit-background-clip: padding-box;
     background-clip: padding-box;
     outline: 0;
 }
@@ -144,8 +140,13 @@ button.close {
 }
 
 .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -157,6 +158,7 @@ button.close {
     border: 2px solid transparent;
     outline: none;
     border-radius: 10px;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -168,28 +170,32 @@ button.close {
     border: 2px solid #7bb1fd;
 }
 
-.rowflex{
+.rowflex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
 }
 
-.rowflex button{
+.rowflex button {
     margin-left: 20px;
 }
 
-.changingre{
-   background: #f85032;
+.changingre {
+    background: #f85032;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e73827, #f85032);
     /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#e73827), to(#f85032));
     background: linear-gradient(to right, #e73827, #f85032);
 }
 
-.changingre:hover{
+.changingre:hover {
     background: #f85032;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #e73827, #f85032);
     /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, right top, left top, from(#e73827), to(#f85032));
     background: linear-gradient(to left, #e73827, #f85032);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
@@ -332,6 +338,7 @@ button.close {
 
 .modal.fade .modal-dialog {
     transition: -webkit-transform .3s ease-out;
+    -webkit-transition: -webkit-transform .3s ease-out;
     transition: transform .3s ease-out;
     transition: transform .3s ease-out, -webkit-transform .3s ease-out;
     -webkit-transform: translate(0, -50px);
@@ -340,6 +347,7 @@ button.close {
 
 @media (prefers-reduced-motion:reduce) {
     .modal.fade .modal-dialog {
+        -webkit-transition: none;
         transition: none
     }
 }
@@ -351,6 +359,7 @@ button.close {
 
 .modal-dialog-scrollable {
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     max-height: calc(100% - 1rem)
 }
@@ -372,8 +381,10 @@ button.close {
 
 .modal-dialog-centered {
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex-align: center;
+    -webkit-box-align: center;
     align-items: center;
     min-height: calc(100% - 1rem)
 }
@@ -386,8 +397,11 @@ button.close {
 
 .modal-dialog-centered.modal-dialog-scrollable {
     -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
     -ms-flex-pack: center;
+    -webkit-box-pack: center;
     justify-content: center;
     height: 100%
 }
@@ -403,8 +417,11 @@ button.close {
 .modal-content {
     position: relative;
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
@@ -435,10 +452,13 @@ button.close {
 
 .modal-header {
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex-align: start;
+    -webkit-box-align: start;
     align-items: flex-start;
     -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
     justify-content: space-between;
     padding: 1rem 1rem;
     border-bottom: 1px solid #dee2e6;
@@ -459,16 +479,20 @@ button.close {
 .modal-body {
     position: relative;
     -ms-flex: 1 1 auto;
+    -webkit-box-flex: 1;
     flex: 1 1 auto;
     padding: 1rem
 }
 
 .modal-footer {
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex-align: center;
+    -webkit-box-align: center;
     align-items: center;
     -ms-flex-pack: end;
+    -webkit-box-pack: end;
     justify-content: flex-end;
     padding: 1rem;
     border-top: 1px solid #dee2e6;

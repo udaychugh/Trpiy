@@ -1,11 +1,17 @@
-section{
+section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 90vh;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
-.feedback{
+.feedback {
     margin-top: 90px;
     text-align: center;
     border: 2px solid black;
@@ -14,61 +20,75 @@ section{
     padding: 10px;
 }
 
-.feedback h2{
+.feedback h2 {
     text-transform: uppercase;
     margin: 5px;
 }
 
-.feedbox{
+.feedbox {
     padding: 8px;
     margin: 8px 80px;
     border: 2px solid black;
     border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     cursor: pointer;
+    -webkit-transition: 0.2s;
     transition: 0.2s;
 }
 
-.feedbox:hover{
+.feedbox:hover {
     background-color: #f6f6f6;
 }
 
-.feedbox i{
+.feedbox i {
     font-size: 22px;
     margin-left: 10px;
 }
 
-.feedbox:nth-child(1) i{
+.feedbox:nth-child(1) i {
     color: #ffd500;
 }
 
-.feedbox:nth-child(2) i{
+.feedbox:nth-child(2) i {
     color: #ff9500;
 }
 
-.feedbox:nth-child(3) i{
+.feedbox:nth-child(3) i {
     color: #ff1500;
 }
 
-textarea{
+textarea {
     height: 100px;
     width: 300px;
     border: 2px solid black;
     outline: none;
     border-radius: 10px;
-    margin:8px 0;
+    margin: 8px 0;
     resize: none;
     padding: 10px;
     font-size: 18px;
     background-color: transparent;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 
-textarea::placeholder{
+textarea::-webkit-input-placeholder {
     color: black;
 }
 
-textarea:focus{
+textarea:-ms-input-placeholder {
+    color: black;
+}
+
+textarea::placeholder {
+    color: black;
+}
+
+textarea:focus {
     background-color: #f6f6f6;
 }
