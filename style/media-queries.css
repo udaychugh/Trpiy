@@ -1,0 +1,378 @@
+@media screen and (min-width: 320px) {
+
+    /* Global Font increased */
+    .logo {
+        position: absolute;
+        width: 35px;
+        height: 30px;
+        -webkit-box-shadow: -20px 0 0 rgb(255 164 36 / 50%);
+        box-shadow: -20px 0 0 rgb(255 164 36 / 50%);
+    }
+
+    .whatistripy p {
+
+        padding-right: 0px;
+    }
+
+    .inputbox input {
+        font-size: 11px;
+    }
+
+    .close2 {
+        height: 25px;
+        font-size: 10px;
+        padding: 0;
+        width: 75px;
+    }
+
+    .confirmpay {
+        height: 25px;
+        font-size: 10px;
+        padding: 0;
+        width: 105px;
+    }
+
+    .optionsbtn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 10px;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .chip {
+        max-width: 30px;
+    }
+
+    .payment .card {
+        width: 221px;
+        height: 150px;
+        font-size: 10px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .addbutton {
+        margin-top: 20px;
+    }
+
+    .table th,
+    .table td {
+        text-align: center;
+        vertical-align: middle;
+        font-size: 14px;
+    }
+
+    .userpayemntamount {
+        font-size: 14px;
+    }
+
+    .payments-group {
+        -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    }
+
+    .useit p {
+        font-size: 20px;
+    }
+
+    #paynow {
+        height: 40px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 9px;
+    }
+
+    #export-btn,
+    #show-chart {
+        padding: 10px 20px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    #editbutton,
+    #deletebutton {
+        padding: 10px 12px;
+        height: 30px;
+    }
+
+    .midme {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-line-pack: justify;
+        align-content: space-between;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+}
+
+
+@media screen and (min-width: 370px) {
+
+    /* Global Font increased */
+    body {
+        font-size: 16px;
+    }
+
+    .addbutton {
+        margin-top: 20px;
+    }
+
+    .table th,
+    .table td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .userpayemntamount {
+        font-size: 14px;
+    }
+
+    .payments-group {
+        -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    }
+
+    .useit p {
+        font-size: 20px;
+    }
+
+    #paynow {
+        padding: 10px 20px;
+        height: 30px;
+        margin-bottom: 10px;
+        font-size: 11px;
+    }
+
+    #export-btn,
+    #show-chart {
+        padding: 10px 20px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    #editbutton,
+    #deletebutton {
+        padding: 10px 12px;
+        height: 30px;
+    }
+
+    .midme {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    /* Global Font increased */
+    .close2 {
+        height: 30px;
+        font-size: 14px;
+        padding: 0;
+        width: 85px;
+    }
+
+    .confirmpay {
+        height: 30px;
+        font-size: 14px;
+        padding: 0;
+        width: 120px;
+    }
+
+    .optionsbtn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 15px;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .chip {
+        max-width: 40px;
+    }
+
+    .payment .card {
+        width: 221px;
+        height: 150px;
+        font-size: 10px;
+    }
+
+    body {
+        font-size: 20px;
+    }
+
+    .addbutton {
+        margin-top: 30px;
+    }
+
+    .table th,
+    .table td {
+        text-align: center;
+        vertical-align: baseline;
+    }
+
+    #editbutton,
+    #deletebutton {
+        padding: 10px 30px 10px 30px;
+    }
+
+    .btn {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .useit p {
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 1025px) {
+
+    /* Global Font increased */
+    body {
+        font-size: 20px;
+    }
+
+    .close2 {
+        height: 35px;
+        font-size: 16px;
+        padding: 0;
+        width: 90px;
+    }
+
+    .confirmpay {
+        height: 35px;
+        font-size: 16px;
+        padding: 0;
+        width: 140px;
+    }
+
+    .optionsbtn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 15px;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .chip {
+        max-width: 40px;
+    }
+
+    .payment .card {
+        width: 350px;
+        height: 230px;
+        font-size: 16px;
+    }
+
+    .addbutton {
+        margin-top: 30px;
+    }
+
+    .table th,
+    .table td {
+        text-align: center;
+    }
+
+    #editbutton,
+    #deletebutton {
+        padding: 10px 30px 10px 30px;
+    }
+
+    .btn {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .useit p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+
+    /* Global Font increased */
+    body {
+        font-size: 24px;
+    }
+
+    h1,
+    h2 {
+        font-size: 40px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
