@@ -376,3 +376,9 @@
         font-size: 16px;
     }
 }
+
+@media screen and (max-width: 1500px) {
+    .btn{
+        overflow-y: hidden;
+    }
+}
