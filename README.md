@@ -20,7 +20,7 @@ With tripy you can easily split trip costs with a large group of people and get 
   <li>The green paid sign is the symbol of successful payment.</li>
 </ul>
 
-<img src="hhttps://raw.githubusercontent.com/udaychugh/show/main/images/tripy2.PNG" height="400px" width="700px">
+<img src="https://raw.githubusercontent.com/udaychugh/tripy/main/images/tripy2.PNG" height="400px" width="700px">
 
 ## Contributors
 
@@ -28,7 +28,7 @@ With tripy you can easily split trip costs with a large group of people and get 
 2.	Harshit Arora - Ui design and responsive to all devices <br>
 3.	Shivam Bansal - UX prototyping
 
-<img src="hhttps://raw.githubusercontent.com/udaychugh/show/main/images/tripy6.PNG" height="400px" width="700px">
+<img src="https://raw.githubusercontent.com/udaychugh/show/main/images/tripy6.PNG" height="400px" width="700px">
 
 
 
