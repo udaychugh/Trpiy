@@ -24,11 +24,11 @@ With tripy you can easily split trip costs with a large group of people and get 
 
 ## Contributors
 
-1.	Uday Chugh - Front end and back end development <br>
-2.	Harshit Arora - Ui design and responsive to all devices <br>
-3.	Shivam Bansal - UX prototyping
+1.	Uday Chugh - UI ENGINEER <br>
+2.	Harshit Arora - UX DESIGNER <br>
+3.	Shivam Bansal - APP TESTER
 
-<img src="https://raw.githubusercontent.com/udaychugh/show/main/images/tripy6.PNG" height="400px" width="700px">
+<img src="https://raw.githubusercontent.com/udaychugh/tripy/main/images/tripy5.PNG" height="400px" width="700px">
 
 
 
