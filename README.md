@@ -1,6 +1,6 @@
 # Tripy - Split your trip bill
 
-<a href="https://udaychugh.github.io/Trpiy/" target="_blank">Click here for demo</a>
+<a href="https://udaychugh.github.io/tripy/" target="_blank">Click here for demo</a>
 
 <img src="https://raw.githubusercontent.com/udaychugh/show/main/images/tirpy1.PNG" height="400px" width="700px">
 
